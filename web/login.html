@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("pic/classroom.jpg");
+            background-size: cover;
+            background: linear-gradient(135deg,#1a1a1a, #2c2c2c, #3a3a3a);
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* 👇 Glass brown aesthetic box */
+        .login-box {
+            background: rgba(60, 40, 20, 0.75); /* brown glass */
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 12px;
+            width: 350px;
+            color: #f5e6d3;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+
+        .login-box h2 {
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.15);
+            color: white;
+            outline: none;
+        }
+
+        .login-box input::placeholder {
+            color: #ddd;
+        }
+
+        /* 👇 Brown aesthetic button */
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #f4c430;
+            color: black;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: rgba(139, 94, 60, 0.95); /* lighter brown */
+        }
+
+        .link {
+            margin-top: 15px;
+            display: block;
+            color: #e0c3a3;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <form action="LoginServlet" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        <a href="dashboard.html">
+            <button type="button" class="btn">Home</button>
+        </a>
+    </div>
+
+</body>
+</html>
